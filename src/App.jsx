@@ -34,6 +34,7 @@ import AddUser from './34StateLiftUpAddUser'
 import DispayUser from './34StateLiftUpDisplayUser'
 import UpdateObject from './35UpdateObject'
 import UpdateArray from './36UpdateArray'
+import UseAction from './37useActionState'
 
 
 
@@ -130,7 +131,8 @@ function App() {
       {/* <AddUser Setuser={Setuser} handleClick={handleClick} />
       <DispayUser name={name} /> */}
       {/* <UpdateObject/> */}
-      <UpdateArray/>
+      {/* <UpdateArray/> */}
+      <UseAction/>
 
     </>
   )
