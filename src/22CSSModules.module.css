@@ -1,0 +1,6 @@
+.cardStyle {
+    border: 1px solid #ccc;
+    width: 200px;
+    box-shadow: 1px 2px 3px 0px #cccccc57;
+    margin: 10px;
+}
