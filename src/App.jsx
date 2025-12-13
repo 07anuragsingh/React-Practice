@@ -37,6 +37,7 @@ import UpdateArray from './36UpdateArray'
 import UseAction from './37useActionState'
 import UseIdCompo from './38useIdState'
 import CustomHooks from './39customHooks'
+import ContextProvider from './40ContextProvider'
 
 
 
@@ -136,7 +137,8 @@ function App() {
       {/* <UpdateArray/> */}
       {/* <UseAction/> */}
       {/* <UseIdCompo/> */}
-      <CustomHooks/>
+      {/* <CustomHooks/> */}
+      <ContextProvider/>
     </>
   )
 }
