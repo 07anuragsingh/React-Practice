@@ -1,0 +1,19 @@
+.container{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 10px
+}
+.linksContainer{
+        display: flex;
+    justify-content: space-between;
+   
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.link{
+    padding: 5px;
+}
