@@ -1,0 +1,11 @@
+.navlink {
+    padding: 0px;
+
+    margin: 2px;
+
+}
+
+.navLinkContainer {
+    display: flex;
+    justify-content: center;
+}

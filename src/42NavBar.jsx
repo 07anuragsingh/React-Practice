@@ -11,6 +11,7 @@ export default function Navbar() {
                 <Link className="link" to='/about'><h3>About</h3></Link>
                 <Link className="link" to='/main'><h3>Main</h3></Link>
                 <Link className="link" to='/mddfsdsdfain'><h3>404</h3></Link>
+                <Link className="link" to='/nestednav'><h3>NestedNav</h3></Link>
             </div>
         </div>
     )
