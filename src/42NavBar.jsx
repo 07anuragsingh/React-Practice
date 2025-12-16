@@ -1,7 +1,8 @@
-import { Link } from "react-router"
+import { Link, Outlet } from "react-router"
 import './42NavBar.css'
 export default function Navbar() {
-    return (
+    return ( 
+        <div>
         <div className="container">
             <div className="logo">
                 <h3>Logo</h3>
@@ -12,7 +13,11 @@ export default function Navbar() {
                 <Link className="link" to='/main'><h3>Main</h3></Link>
                 <Link className="link" to='/mddfsdsdfain'><h3>404</h3></Link>
                 <Link className="link" to='/nestednav'><h3>NestedNav</h3></Link>
+                
             </div>
+            
+        </div>
+        <Outlet/>
         </div>
     )
 }
