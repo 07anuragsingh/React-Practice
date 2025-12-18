@@ -11,8 +11,12 @@ export default function ReactRouter() {
                     {/* ROute Layout  College page se NAvbar Hta dega*/}
                     <Route element={<Navbar />} >
                         <Route path='/' element={<h2>Home</h2>} />
-                        <Route path='/about' element={<h2>About</h2>} />
-                        <Route path='/main' element={<h2>Main</h2>} />
+
+                        {/* Route Prefix */}
+                        <Route path='/user'>
+                            <Route path='/user/about' element={<h2>About</h2>} />
+                            <Route path='/user/main' element={<h2>Main</h2>} />
+                        </Route>
                         <Route path='/*' element={<PageNotFound />} />
                     </Route>
                     {/* Nested Navigation */}
@@ -22,7 +26,7 @@ export default function ReactRouter() {
 
                         {/* Route Index - by default student page ka data aaega */}
                         <Route index element={<p >Student Page - Nested navigation</p>}></Route>
-                        
+
                         <Route path='subject' element={<h1 >subject Page - Nested navigation</h1>}></Route>
                         <Route path='class' element={<h1 >class Page - Nested navigation</h1>}></Route>
                     </Route>

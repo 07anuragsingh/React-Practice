@@ -9,8 +9,8 @@ export default function Navbar() {
             </div>
             <div className="linksContainer">
                 <Link className="link" to='/'><h3>Home</h3></Link>
-                <Link className="link" to='/about'><h3>About</h3></Link>
-                <Link className="link" to='/main'><h3>Main</h3></Link>
+                <Link className="link" to='/user/about'><h3>About</h3></Link>
+                <Link className="link" to='/user/main'><h3>Main</h3></Link>
                 <Link className="link" to='/mddfsdsdfain'><h3>404</h3></Link>
                 <Link className="link" to='/nestednav'><h3>NestedNav</h3></Link>
                 
