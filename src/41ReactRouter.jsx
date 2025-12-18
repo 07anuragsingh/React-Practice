@@ -2,6 +2,10 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router'
 import PageNotFound from './43PageNotFound'
 import Navbar from './42NavBar'
 import College from './43NestedNav'
+import UserList from './44UserList'
+import UserDetail from './44UserDetail'
+
+
 export default function ReactRouter() {
     return (
         <>
@@ -16,8 +20,12 @@ export default function ReactRouter() {
                         <Route path='/user'>
                             <Route path='/user/about' element={<h2>About</h2>} />
                             <Route path='/user/main' element={<h2>Main</h2>} />
+
+
                         </Route>
                         <Route path='/*' element={<PageNotFound />} />
+                        <Route path='/users' element={<UserList />} />
+                        <Route path='/users/:id' element={<UserDetail />} />
                     </Route>
                     {/* Nested Navigation */}
                     <Route path='/nestednav' element={<College />}>
