@@ -24,8 +24,10 @@ export default function ReactRouter() {
 
                         </Route>
                         <Route path='/*' element={<PageNotFound />} />
-                        <Route path='/users' element={<UserList />} />
-                        <Route path='/users/:id' element={<UserDetail />} />
+                        {/* <Route path='/users' element={<UserList />} /> */}
+                        {/* optional Segement */}
+                        <Route path='/users/list?' element={<UserList />} />
+                        <Route path='/users/:id/:name?' element={<UserDetail />} />
                     </Route>
                     {/* Nested Navigation */}
                     <Route path='/nestednav' element={<College />}>

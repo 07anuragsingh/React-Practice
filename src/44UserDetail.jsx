@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router"
 
 export default function UserDetail() {
 
-    const paramsData=useParams();
+    const paramsData=useParams(); // Retuen Object
     
     console.log(paramsData.id);
     

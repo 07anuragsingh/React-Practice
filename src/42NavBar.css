@@ -21,3 +21,9 @@ body{
     display: flex;
     align-items: center;
 }
+.active{
+    color:aqua;
+}
+.custom-active{
+    color: black;
+}

@@ -13,11 +13,22 @@ export default function UserList() {
     return (
         <>
             <div style={{ marginLeft: 20 }} >
-                <h1>User List Page</h1>
+                <h1>User List Page with id</h1>
                 {
                     userData.map((item,index) => (
                         <div key={index}>
                             <h4><Link to={"/users/" + item.id} > {item.name}</Link></h4>
+                        </div>
+                    ))
+                }
+
+            </div>
+             <div style={{ marginLeft: 20 }} >
+                <h1>User List Page with Name and id</h1>
+                {
+                    userData.map((item,index) => (
+                        <div key={index}>
+                            <h4><Link to={"/users/" + item.id +"/"+ item.name} > {item.name}</Link></h4>
                         </div>
                     ))
                 }
