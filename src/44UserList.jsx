@@ -2,7 +2,7 @@ import { Link } from "react-router"
 
 export default function UserList() {
     const userData = [
-        { id: 1, name: 'Anil' },
+        { id: 1, name: 'Anurag' },
         { id: 2, name: 'Sam' },
         { id: 3, name: 'Sidhu' },
         { id: 4, name: 'Peter' },
