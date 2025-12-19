@@ -14,7 +14,7 @@ export default function Navbar() {
                     <NavLink className="link" to='/mddfsdsdfain'><h3>404</h3></NavLink>
                     <NavLink className="link" to='/nestednav'><h3>NestedNav</h3></NavLink>
                     <NavLink className="link" to='/users'><h3>Users</h3></NavLink>
-                    <NavLink className="link" to='/users/list'><h3>LIST</h3></NavLink>
+                    <NavLink className="link" to='/users/list'><h3>List</h3></NavLink>
 
                 </div>
 
