@@ -39,6 +39,7 @@ import UseIdCompo from './38useIdState'
 import CustomHooks from './39customHooks'
 import ContextProvider from './40ContextProvider'
 import ReactRouter from './41ReactRouter'
+import GetUserFromApi from './45FetchApi'
 
 
 
@@ -140,7 +141,8 @@ function App() {
       {/* <UseIdCompo/> */}
       {/* <CustomHooks/> */}
       {/* <ContextProvider/> */}
-      <ReactRouter/>
+      {/* <ReactRouter/> */}
+      <GetUserFromApi/>
     </>
   )
 }
