@@ -43,14 +43,22 @@ export default function GetUserFromApi() {
         setuserData(response.users)
 
     }
-    useEffect(() => {
-        (async () => {
-            await getuserData();
-        })();
-    }, []);
+    // useEffect(() => {
+    //     (async () => {
+    //         await getuserData();
+    //     })();
+    // }, []);
+
+    useEffect(()=>{
+        (
+            async ()=>{
+                await getuserData();
+            }
+        )();
+    },[])
 
     return (
-        <>
+        <> 
             <h2>Get Data from Api With GET Method</h2>
             {userData && userData.map((user, key) => (
                 <ul key={key}>
