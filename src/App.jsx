@@ -40,6 +40,7 @@ import CustomHooks from './39customHooks'
 import ContextProvider from './40ContextProvider'
 import ReactRouter from './41ReactRouter'
 import GetUserFromApi from './45FetchApi'
+import MyApi from './46IntegrateJsonServerApi'
 
 
 
@@ -142,7 +143,8 @@ function App() {
       {/* <CustomHooks/> */}
       {/* <ContextProvider/> */}
       {/* <ReactRouter/> */}
-      <GetUserFromApi/>
+      {/* <GetUserFromApi/> */}
+      <MyApi/>
     </>
   )
 }

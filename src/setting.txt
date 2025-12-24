@@ -1,0 +1,25 @@
+{
+  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+
+  "editor.wordBasedSuggestions": "off",
+
+  "editor.snippetSuggestions": "inline",
+
+  "editor.suggest.showKeywords": true,
+  "editor.suggest.showFunctions": true,
+  "editor.suggest.showVariables": false,
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.showClasses": false,
+  "editor.suggest.showModules": false,
+
+  "editor.inlineSuggest.enabled": false,
+  "editor.suggest.preview": false,
+
+  "files.autoSave": "afterDelay"
+}
