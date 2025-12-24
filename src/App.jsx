@@ -41,6 +41,7 @@ import ContextProvider from './40ContextProvider'
 import ReactRouter from './41ReactRouter'
 import GetUserFromApi from './45FetchApi'
 import MyApi from './46IntegrateJsonServerApi'
+import AddShowUser from './47RouteAddShowUser'
 
 
 
@@ -144,7 +145,8 @@ function App() {
       {/* <ContextProvider/> */}
       {/* <ReactRouter/> */}
       {/* <GetUserFromApi/> */}
-      <MyApi/>
+      {/* <MyApi/> */}
+      <AddShowUser/>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function MyApi() {
+export default function ShowUserList() {
     const [userdata, setuserdata] = useState([]);
     const [loader,setloader] = useState(false)
 
