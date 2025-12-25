@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function ShowUserList() {
     const [userdata, setuserdata] = useState([]);
-    const [loader,setloader] = useState(false)
+    const [loader, setloader] = useState(false)
 
 
     async function getUserData() {
@@ -18,39 +18,42 @@ export default function ShowUserList() {
         (
             async () => {
                 setloader(true)
-                   await getUserData();
+                await getUserData();
             })();
     }, [])
 
-    const  userDelete = async(id)=>{
-       // console.log(id);
-       const url = "http://localhost:3000/user";
-       let response = await fetch(url+"/"+id,{
-        method : "delete"
-       });
+    const userDelete = async (id) => {
+        // console.log(id);
+        const url = "http://localhost:3000/user";
+        let response = await fetch(url + "/" + id, {
+            method: "delete"
+        });
         response = await response.json();
-        if(response){
+        if (response) {
             alert("record deleted")
         }
         getUserData()
     }
-    
+
     return (
         <>
             <h3>User Data</h3>
-            { !loader ?
+            {!loader ?
                 userdata && userdata.map((item, index) => (
-                    <div style={{margin :"20px"}} key={index}>
-                    <h3 > name :{item.name}</h3>
-                    <h3 > class :{item.class}</h3>
-                    <h3 > age :{item.age}</h3>
-                    <button onClick={()=>userDelete(item.id)}>Delete</button>
-                    <hr />
-                    <hr />
-                </div>
+                    <div style={{ margin: "20px" }} key={index}>
+                        <h3 > name :{item.name}</h3>
+                        <h3 > class :{item.class}</h3>
+                        <h3 > age :{item.age}</h3>
+                        <button onClick={() => {
+                            if (window.confirm("Are you sure?")) {
+                                userDelete(item.id);
+                            }
+                        }}>Delete</button>
+                        <hr />
+                        <hr />
+                    </div>
                 ))
-            :<h1>Data Loading...</h1>
-                
+                : <h1>Data Loading...</h1>
             }
 
         </>
