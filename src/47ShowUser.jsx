@@ -28,7 +28,7 @@ export default function ShowUserList() {
         // console.log(id);
         const url = "http://localhost:3000/user";
         let response = await fetch(url + "/" + id, {
-            method: "delete"
+            method: "DELETE"
         });
         response = await response.json();
         if (response) {
