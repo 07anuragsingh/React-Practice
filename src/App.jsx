@@ -42,6 +42,7 @@ import ReactRouter from './41ReactRouter'
 import GetUserFromApi from './45FetchApi'
 import MyApi from './46IntegrateJsonServerApi'
 import AddShowUser from './47RouteAddShowUser'
+import AxiosApi from './48AxiosGET'
 
 
 
@@ -146,7 +147,8 @@ function App() {
       {/* <ReactRouter/> */}
       {/* <GetUserFromApi/> */}
       {/* <MyApi/> */}
-      <AddShowUser/>
+      {/* <AddShowUser/> */}
+      <AxiosApi/>
     </>
   )
 }
