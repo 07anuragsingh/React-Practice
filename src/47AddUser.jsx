@@ -31,7 +31,7 @@ export default function AddUser() {
 
     return (
         <>
-            <div style={{ textAlign: "center" }}>
+            <div style={{ textAlign: "center"}}>
                 <h2>Add User</h2>
 
                 <label>Name: </label>

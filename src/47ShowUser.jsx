@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router";
 
 export default function ShowUserList() {
     const [userdata, setuserdata] = useState([]);
-    const [loader, setloader] = useState(false)
+    const [loader, setloader] = useState(false);
+    const navigate = useNavigate();
 
 
     async function getUserData() {
@@ -35,6 +37,10 @@ export default function ShowUserList() {
         getUserData()
     }
 
+    const userEdit = (id)=>{
+        navigate("/edit/"+id)
+    }
+
     return (
         <>
             <h3>User Data</h3>
@@ -42,13 +48,14 @@ export default function ShowUserList() {
                 userdata && userdata.map((item, index) => (
                     <div style={{ margin: "20px" }} key={index}>
                         <h3 > name :{item.name}</h3>
-                        <h3 > class :{item.class}</h3>
+                        <h3 > class :{item.classs}</h3>
                         <h3 > age :{item.age}</h3>
                         <button onClick={() => {
                             if (window.confirm("Are you sure?")) {
                                 userDelete(item.id);
                             }
                         }}>Delete</button>
+                        <button onClick={()=>{userEdit(item.id)}}>Edit</button>
                         <hr />
                         <hr />
                     </div>
