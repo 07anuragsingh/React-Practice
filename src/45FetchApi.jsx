@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 
-
+//🔥 Fetch me .json() ke baad direct data milta hai
+//🔥 Axios me JSON data property ke andar hota hai
 export default function GetUserFromApi() {
     //     const[userData,setUserData] = useState([]);
 
@@ -40,7 +41,7 @@ export default function GetUserFromApi() {
         const url = "https://dummyjson.com/users";
         let response = await fetch(url);
         response = await response.json();
-        setuserData(response.users)
+        setuserData(response.users);
 
     }
     // useEffect(() => {
