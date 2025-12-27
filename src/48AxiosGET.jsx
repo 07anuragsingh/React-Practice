@@ -1,5 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router";
+
+import { Nav, NavLink } from "react-bootstrap";
 
 //🔥 Fetch me .json() ke baad direct data milta hai
 //🔥 Axios me JSON data property ke andar hota hai
@@ -10,17 +13,19 @@ export default function AxiosApi() {
 
 
 
-    const baseURL = "https://dummyjson.com/users";
+
+    const baseURL = "http://localhost:3000/user";
+
     const getData = async () => {
         try {
             const resposne = await axios.get(baseURL);
-            console.log(resposne.data.users);
-            setUserData(resposne.data.users);
-            
+            console.log(resposne.data);
+            setUserData(resposne.data);
+
 
         } catch (error) {
             console.log(error);
-        }finally{
+        } finally {
             setLoading(false);
         }
     }
@@ -36,12 +41,16 @@ export default function AxiosApi() {
 
     return (
         <>
+            
+
             <h2>AXIOS API</h2>
-            { !loading ? 
+            {!loading ?
                 userData && userData.map((user) => (
                     <div style={{ margin: "10px" }} key={user.id}>
-                        <h4>{user.id}</h4>
-                        <h4>{user.firstName}</h4>
+
+                        <h4>Name :{user.name}</h4>
+                        <h4>Age:{user.age}</h4>
+                        <h4>Class :{user.classs}</h4>
                         <hr /><hr />
                     </div>
                 ))

@@ -43,6 +43,7 @@ import GetUserFromApi from './45FetchApi'
 import MyApi from './46IntegrateJsonServerApi'
 import AddShowUser from './47RouteAddShowUser'
 import AxiosApi from './48AxiosGET'
+import AxiosRuutes from './48AxiosRoutes'
 
 
 
@@ -148,7 +149,8 @@ function App() {
       {/* <GetUserFromApi/> */}
       {/* <MyApi/> */}
       {/* <AddShowUser/> */}
-      <AxiosApi/>
+      {/* <AxiosApi/> */}
+      <AxiosRuutes/>
     </>
   )
 }
