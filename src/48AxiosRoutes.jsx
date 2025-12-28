@@ -1,6 +1,7 @@
 import { BrowserRouter, NavLink, Route, Routes } from "react-router";
 import AxiosApi from "./48AxiosGET";
 import AxiosPost from "./48AxiosPost";
+import EditUserDetail from "./48AxiosPUT";
 
 export default function AxiosRuutes(){
     
@@ -16,7 +17,7 @@ export default function AxiosRuutes(){
             <Routes>
                 <Route path="/" element={<AxiosApi/>}/>
                 <Route path="/add" element={<AxiosPost/>}/>
-                {/* <Route path="/edit/:id?" element = {<EditUser/>}/> */}
+                <Route path="/edit/:id?" element = {<EditUserDetail/>}/>
             </Routes>
         </BrowserRouter>
         </>

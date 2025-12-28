@@ -1,7 +1,7 @@
 import DeleteUser from "./48AxiosDelete";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Link, Route, Routes, useNavigate } from "react-router";
 
 import { Nav, NavLink } from "react-bootstrap";
 
@@ -11,6 +11,8 @@ import { Nav, NavLink } from "react-bootstrap";
 export default function AxiosApi() {
     const [userData, setUserData] = useState([]);
     const [loading, setLoading] = useState(false);
+    
+    const navigate = useNavigate();
 
 
 
@@ -54,8 +56,14 @@ export default function AxiosApi() {
             
     //     }
     // } 
+    // Delete Component
     const handleDeleteFromUI = (id) => {
         setUserData(userData.filter((user)=>user.id !==id));
+    }
+
+    // Edit User details
+    const editUser =(id)=>{
+        navigate('/edit/'+id)
     }
 
     return (
@@ -77,8 +85,10 @@ export default function AxiosApi() {
                         }}> Delete User</button> */}
                         {/* Different component */}
                         <DeleteUser id={user.id} onDelete ={handleDeleteFromUI}/>
+                        <button onClick={()=>{editUser(user.id)}}>Edit</button>
                         <hr/>
                         <hr/>
+                        
                         
                     </div>
                 ))
