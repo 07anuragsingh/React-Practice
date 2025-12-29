@@ -44,7 +44,7 @@ import MyApi from './46IntegrateJsonServerApi'
 import AddShowUser from './47RouteAddShowUser'
 import AxiosApi from './48AxiosGET'
 import AxiosRuutes from './48AxiosRoutes'
-
+import SimpleValidation from './49SimpleValidation'
 
 
 function App() {
@@ -150,7 +150,8 @@ function App() {
       {/* <MyApi/> */}
       {/* <AddShowUser/> */}
       {/* <AxiosApi/> */}
-      <AxiosRuutes/>
+      {/* <AxiosRuutes/> */}
+      <SimpleValidation/>
     </>
   )
 }
