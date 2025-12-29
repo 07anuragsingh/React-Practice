@@ -15,6 +15,7 @@ export default function UseAction() {
             return { error: 'Data not Submitted', name, password }
         }
     }
+    
     const [state, action, pending] = useActionState(handleSubmit, undefined)
 
     return (
