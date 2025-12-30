@@ -46,6 +46,7 @@ import AxiosApi from './48AxiosGET'
 import AxiosRuutes from './48AxiosRoutes'
 import SimpleValidation from './49SimpleValidation'
 import AdvValidation from './50AdvValidationUsingUseActionState'
+import UseReducerHook from './51UseReducer'
 
 
 function App() {
@@ -153,7 +154,8 @@ function App() {
       {/* <AxiosApi/> */}
       {/* <AxiosRuutes/> */}
       {/* <SimpleValidation/> */}
-      <AdvValidation/>
+      {/* <AdvValidation/> */}
+      <UseReducerHook/>
     </>
   )
 }
