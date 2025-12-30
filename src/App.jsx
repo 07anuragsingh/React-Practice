@@ -48,6 +48,7 @@ import SimpleValidation from './49SimpleValidation'
 import AdvValidation from './50AdvValidationUsingUseActionState'
 import UseReducerHook from './51UseReducer'
 import Lazyloading from './52LazyLoading'
+import UseApi from './53UseAPI'
 
 
 function App() {
@@ -157,7 +158,8 @@ function App() {
       {/* <SimpleValidation/> */}
       {/* <AdvValidation/> */}
       {/* <UseReducerHook/> */}
-      <Lazyloading/>
+      {/* <Lazyloading/> */}
+      <UseApi/>
     </>
   )
 }
