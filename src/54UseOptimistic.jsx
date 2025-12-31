@@ -71,7 +71,7 @@ export default function UseOptimistic() {
             </form>
             {
                 optiuser?.map((user) => (
-                    <h3 key={user.id}>{user.name}</h3>
+                    <h3 key={user.id}>name : {user.name}</h3>
                 ))
 
             }
