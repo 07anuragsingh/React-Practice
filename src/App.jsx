@@ -51,6 +51,7 @@ import Lazyloading from './52LazyLoading'
 import UseApi from './53UseAPI'
 // import UseOptimistic from './54UseOptimistic'
 import ActivityExample from './55Activity'
+import UseEffectEventExample from './56useEffectEvent'
 
 
 function App() {
@@ -163,7 +164,8 @@ function App() {
       {/* <Lazyloading/> */}
       {/* <UseApi/> */}
       {/* <UseOptimistic/> */}
-      <ActivityExample/>
+      {/* <ActivityExample/> */}
+      <UseEffectEventExample/>
     </>
   )
 }
