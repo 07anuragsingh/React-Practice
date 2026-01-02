@@ -6,16 +6,20 @@ import { useEffect, useOptimistic, useState } from "react";
 export default function UseOptimistic() {
     const [user, setUser] = useState([]);
     const [optiuser, addOptiuser] = useOptimistic(user);
-
     const [newuser, setnewuser] = useState('');
+
+
+
     async function delay(ms) {
         await new Promise((resolve) => setTimeout(resolve, ms))
     }
 
+    // POST LOGIC
     const addUser = async () => {
 
 
         if (!newuser.trim()) return;
+        
         addOptiuser((prev) => [...prev, { name: newuser }])
 
         try {
@@ -24,7 +28,7 @@ export default function UseOptimistic() {
             });
             console.log(res.data);
 
-            await delay(3000)
+            await delay(3000);
             if (res) {
                 // getData();
                 // ✅ update real state to match optimistic state
@@ -40,6 +44,7 @@ export default function UseOptimistic() {
 
     }
 
+    // GET DATA LOGIC
     const getData = async () => {
         try {
             const res = await axios.get('http://localhost:3000/user');
