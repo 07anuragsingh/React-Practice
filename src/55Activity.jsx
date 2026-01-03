@@ -7,7 +7,7 @@ export default function ActivityExample() {
    <h1>Activity in React 19.2</h1>
    <button onClick={()=>setShowHome(true)}>Home</button>
    <button onClick={()=>setShowHome(false)}>User Form</button>
-  <Activity mode={showHome==true?'visible':'hidden'} >
+  <Activity mode={showHome?'visible':'hidden'} >
 <Home />
   </Activity>
 
