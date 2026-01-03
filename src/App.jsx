@@ -52,6 +52,7 @@ import UseApi from './53UseAPI'
 // import UseOptimistic from './54UseOptimistic'
 import ActivityExample from './55Activity'
 import UseEffectEventExample from './56useEffectEvent'
+import RTXsetup from './56Redux/01reduxsetup'
 
 
 function App() {
@@ -165,7 +166,8 @@ function App() {
       {/* <UseApi/> */}
       {/* <UseOptimistic/> */}
       {/* <ActivityExample/> */}
-      <UseEffectEventExample/>
+      {/* <UseEffectEventExample/> */}
+      <RTXsetup/>
     </>
   )
 }
