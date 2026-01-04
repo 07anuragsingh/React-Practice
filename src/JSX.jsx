@@ -24,7 +24,7 @@ export default function JSX(){
         <h2>Anurag Kumar singh</h2>
         <img src="public\vite.svg" alt="no enternt connection"></img>
         <ul>
-            <li>i love my indisa</li>
+            <li>i love my india</li>
             <li>kya ho rha bau</li>
             <li>mst hai</li>
         </ul>
