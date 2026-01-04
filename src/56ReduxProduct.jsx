@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux'
 import './56ReduxProduct.css'
-import { addItem } from './56Redux/slice'
+import { addItem ,removeItem} from './56Redux/slice'
 export default function Product() {
     const dispatch = useDispatch()
     return (
@@ -17,6 +17,7 @@ export default function Product() {
                             <h3>Wireless Headphones</h3>
                             <p className="price">₹2,999</p>
                             <button onClick={()=>dispatch(addItem(1))}>Add to Cart</button>
+                            <button onClick={()=>dispatch(removeItem(1))}>REMove Cart</button>
                     </div>
 
                     {/* <!-- Product 2 --> */}
