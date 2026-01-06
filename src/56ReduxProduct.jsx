@@ -1,51 +1,42 @@
 import { useDispatch, useSelector } from 'react-redux'
 import './56ReduxProduct.css'
-import { addItem ,removeItem} from './56Redux/slice'
+import { addItem, removeItem } from './56Redux/cartSlice'
 import { useEffect } from 'react'
 import { fetchProducts } from './56Redux/productSlice'
 export default function Product() {
     const dispatch = useDispatch()
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(fetchProducts())
-    },[])
-    const productSelector = useSelector((state)=>state.productSlice.items)
+    }, [])
+    const productSelector = useSelector((state) => state.productSlice.items)
     console.log(productSelector);
-    
+
+    const cartselector = useSelector((state)=>state.cart.items)
+
     return (
         <>
-            {/* <!-- PRODUCTS --> */}
-            <section className="products">
-                <h2>Our Products</h2>
-
-                <div className="product-grid">
-
-                    {/* <!-- Product 1 --> */}
-                    <div className="product-card">
-                        <img src="https://via.placeholder.com/250" alt="Product"/>
-                            <h3>Wireless Headphones</h3>
-                            <p className="price">₹2,999</p>
-                            <button onClick={()=>dispatch(addItem(1))}>Add to Cart</button>
-                            <button onClick={()=>dispatch(removeItem(1))}>REMove Cart</button>
+            <div className='grid'>
+                {productSelector.length && productSelector.map((item) => (
+                    <div key={item.id}className='card'>
+                        <img src={item.thumbnail} />
+                        <div className='content'>
+                            <div className='title'>{item.title}</div>
+                            <div className='price'>{item.price}</div>
+                            <div className='brand'>{item.brand}</div>
+                            <div className='rating'>{item.rating}</div>
+                            {
+                                cartselector.find(cartItem => cartItem.id === item.id)?
+                                <button disabled={true} className='addToCart' onClick={()=>{dispatch(addItem(item))}} >Add To Cart</button>
+                                :<button className='addToCart' onClick={()=>{dispatch(addItem(item))}} >Add To Cart</button>
+                            }
+                            
+                            <button className='removefromcart' onClick={()=>{dispatch(removeItem(item.id))}} >Remove</button>
+                            
+                        </div>
                     </div>
 
-                    {/* <!-- Product 2 --> */}
-                    <div className="product-card">
-                        <img src="https://via.placeholder.com/250" alt="Product"/>
-                            <h3>Smart Watch</h3>
-                            <p className="price">₹4,499</p>
-                            <button onClick={()=>dispatch(addItem(1))}>Add to Cart</button>
-                    </div>
-
-                    {/* <!-- Product 3 --> */}
-                    <div className="product-card">
-                        <img src="https://via.placeholder.com/250" alt="Product"/>
-                            <h3>Bluetooth Speaker</h3>
-                            <p className="price">₹1,999</p>
-                            <button onClick={()=>dispatch(addItem(1))}>Add to Cart</button>
-                    </div>
-
-                </div>
-            </section>
+                ))}
+            </div>
         </>
 
     )

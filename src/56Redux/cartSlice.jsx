@@ -14,13 +14,9 @@ const addToCart = createSlice({
         },
 
         removeItem: (state, action) => {
-            const index = state.items.findIndex(
-                item => item === action.payload
+            state.items= state.items.filter(
+                item=> item.id !== action.payload
             );
-
-            if (index !== -1) {
-                state.items.splice(index, 1);
-            }
         },
         clearCart:(state,action)=>{
             state.items=state.items.filter(

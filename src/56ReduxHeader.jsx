@@ -1,6 +1,6 @@
 import AddToCart from './56ReduxAddToCart'
 import './56ReduxHeader.css'
-import { clearCart } from './56Redux/slice'
+import { clearCart } from './56Redux/cartSlice'
 import { useDispatch } from 'react-redux'
 
 
