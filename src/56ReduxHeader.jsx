@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux'
 
 
 export default function Header() {
+
     const dispatch = useDispatch()
     return (
         <>
@@ -22,7 +23,7 @@ export default function Header() {
                         <a href="#">Shop</a>
 
                     </nav>
-                    <button onClick={()=>dispatch(clearCart(1))}>Clear Cart</button>
+                    <button onClick={()=>dispatch(clearCart())}>Clear Cart</button>
                     <AddToCart/>
                 </div>
                 

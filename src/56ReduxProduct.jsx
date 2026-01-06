@@ -26,7 +26,7 @@ export default function Product() {
                             <div className='rating'>{item.rating}</div>
                             {
                                 cartselector.find(cartItem => cartItem.id === item.id)?
-                                <button disabled={true} className='addToCart' onClick={()=>{dispatch(addItem(item))}} >Add To Cart</button>
+                                <button disabled={true}  onClick={()=>{dispatch(addItem(item))}} >Item Added</button>
                                 :<button className='addToCart' onClick={()=>{dispatch(addItem(item))}} >Add To Cart</button>
                             }
                             

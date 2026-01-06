@@ -12,7 +12,7 @@ export default function RTXsetup(){
         <Provider store={store}>
         <Header/>
 
-        <h3 >Hello i am store</h3>
+        <h3> Welcome to our store </h3>
         
         <Product/>
         </Provider>
