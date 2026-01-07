@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { removeItem } from "./56Redux/cartSlice";
 import "./56CartList.css";
+import { useNavigate } from "react-router";
 
 export default function CartListComponent() {
     const cartItems = useSelector((state) => state.cart.items);
@@ -10,10 +11,12 @@ export default function CartListComponent() {
         (total, item) => total + item.price,
         0
     );
+    const navigate=useNavigate();
 
     return (
         <div className="cart-container">
             <h2>🛒 My Cart ({cartItems.length} items)</h2>
+            <button onClick={()=>navigate("/")} >Back to Home</button>
 
             {cartItems.length === 0 ? (
                 <p>Your cart is empty</p>
