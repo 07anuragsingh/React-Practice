@@ -53,6 +53,7 @@ import UseApi from './53UseAPI'
 import ActivityExample from './55Activity'
 import UseEffectEventExample from './56useEffectEvent'
 import RTXsetup from './56Redux/01reduxsetup'
+import CartRoutes from './56CartRoutes'
 
 
 function App() {
@@ -167,7 +168,8 @@ function App() {
       {/* <UseOptimistic/> */}
       {/* <ActivityExample/> */}
       {/* <UseEffectEventExample/> */}
-      <RTXsetup/>
+      {/* <RTXsetup/> */}
+      <CartRoutes/>
     </>
   )
 }

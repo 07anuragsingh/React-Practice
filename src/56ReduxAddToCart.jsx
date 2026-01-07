@@ -1,18 +1,20 @@
-import { useSelector } from "react-redux"
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 
 export default function AddToCart() {
-    const cartselector = useSelector((state)=>state.cart.items)
-    return (
-        <>
+  const cartItems = useSelector((state) => state.cart.items);
+  const navigate = useNavigate();
 
-
-            {/* <!-- Cart --> */}
-            <div className="cart">
-                <span className="cart-icon">🛒</span>
-                <span className="cart-count">{cartselector.length}</span>
-            </div>
-
-
-        </>
-    )
+  return (
+    <>
+      <div
+        className="cart"
+        onClick={() => navigate("/cart")}
+        style={{ cursor: "pointer" }}
+      >
+        <span className="cart-icon">🛒</span>
+        <span className="cart-count">{cartItems.length}</span>
+      </div>
+    </>
+  );
 }
