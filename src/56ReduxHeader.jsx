@@ -2,6 +2,7 @@ import AddToCart from './56ReduxAddToCart'
 import './56ReduxHeader.css'
 import { clearCart } from './56Redux/cartSlice'
 import { useDispatch } from 'react-redux'
+import { NavLink } from 'react-router'
 
 
 export default function Header() {
@@ -19,8 +20,8 @@ export default function Header() {
 
                     {/* <!-- Navigation --> */}
                     <nav className="nav">
-                        <a href="#">Home</a>
-                        <a href="#">Shop</a>
+                        <NavLink to="/">Home</NavLink>
+                        
 
                     </nav>
                     <button onClick={()=>dispatch(clearCart())}>Clear Cart</button>

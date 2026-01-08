@@ -51,7 +51,7 @@ import Lazyloading from './52LazyLoading'
 import UseApi from './53UseAPI'
 // import UseOptimistic from './54UseOptimistic'
 import ActivityExample from './55Activity'
-import UseEffectEventExample from './56useEffectEvent'
+import UseEffectEventExample from './55useEffectEvent'
 import RTXsetup from './56Redux/01reduxsetup'
 import CartRoutes from './56CartRoutes'
 

@@ -3,6 +3,8 @@ import './56ReduxProduct.css'
 import { addItem, removeItem } from './56Redux/cartSlice'
 import { useEffect } from 'react'
 import { fetchProducts } from './56Redux/productSlice'
+
+
 export default function Product() {
     const dispatch = useDispatch()
     useEffect(() => {
