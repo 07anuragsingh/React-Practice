@@ -29,7 +29,7 @@ export default function CartListComponent() {
   */
 
   /* ✅ Using selector instead */
-  const cartItems = (selectCartItems);
+  const cartItems = useSelector(selectCartItems);
 
   /* ❌ OLD TOTAL PRICE CALCULATION (NO LONGER NEEDED)
   const totalPrice = cartItems.reduce(

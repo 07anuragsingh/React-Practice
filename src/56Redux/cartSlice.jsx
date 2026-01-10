@@ -10,10 +10,11 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+    
     addItem: (state, action) => {
-      state.items.push(...action.payload);
+      state.items.push({...action.payload,quantity:1});
       localStorage.setItem("cart", JSON.stringify(state.items));
-      quantity: 1
+     
     },
 
     removeItem: (state, action) => {

@@ -15,17 +15,18 @@ export default function Header() {
 
                     {/* <!-- Logo --> */}
                     <div className="logo">
-                        Shop<span>Cart</span>
+                        🛍️ Shop<span>Cart</span>
                     </div>
 
                     {/* <!-- Navigation --> */}
                     <nav className="nav">
                         <NavLink to="/">Home</NavLink>
-                        
-
                     </nav>
-                    <button onClick={()=>dispatch(clearCart())}>Clear Cart</button>
-                    <AddToCart/>
+
+                    <div className="header-actions">
+                        <AddToCart/>
+                        <button className="clear-cart-btn" onClick={()=>dispatch(clearCart())}>🗑️ Clear Cart</button>
+                    </div>
                 </div>
                 
             </header>
