@@ -1,0 +1,190 @@
+.checkout-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.place-order-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  
+  /* Modern gradient background */
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 50%, #6d28d9 100%);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  cursor: pointer;
+  
+  /* Shadows and effects */
+  box-shadow: 0 10px 40px rgba(0, 153, 255, 0.4),
+              0 0 30px rgba(109, 40, 217, 0.2),
+              inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+  
+  /* Text properties */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-width: 280px;
+}
+
+/* Shimmer effect background */
+.place-order-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent);
+  transition: left 0.6s ease-in-out;
+  z-index: 1;
+}
+
+/* Animated particles effect */
+.place-order-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: pulse 3s ease-in-out infinite;
+  z-index: 0;
+}
+
+.place-order-btn:hover {
+  /* Enhanced gradient on hover */
+  background: linear-gradient(135deg, #00f0ff 0%, #0088ff 50%, #8d39d9 100%);
+  
+  /* Elevated shadow effect */
+  box-shadow: 0 20px 60px rgba(0, 153, 255, 0.6),
+              0 0 50px rgba(109, 40, 217, 0.4),
+              inset 0 1px 0 rgba(255, 255, 255, 0.6),
+              0 0 30px rgba(0, 240, 255, 0.5);
+  
+  /* Lift effect */
+  transform: translateY(-6px) scale(1.02);
+}
+
+.place-order-btn:hover::before {
+  left: 100%;
+}
+
+.place-order-btn:active {
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 8px 20px rgba(0, 153, 255, 0.4),
+              0 0 20px rgba(109, 40, 217, 0.2);
+}
+
+.place-order-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Button content alignment */
+.btn-icon {
+  font-size: 22px;
+  display: inline-block;
+  animation: bounce 2s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-text {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-total {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  font-weight: 800;
+  font-size: 20px;
+  background: linear-gradient(135deg, #ffff00, #ffa500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Bounce animation for icon */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Pulse animation for background particle */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .place-order-btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    min-width: 220px;
+    gap: 10px;
+  }
+  
+  .btn-icon {
+    font-size: 20px;
+  }
+  
+  .btn-total {
+    font-size: 18px;
+  }
+  
+  .place-order-btn:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+}
+
+@media (max-width: 480px) {
+  .place-order-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+    min-width: 200px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .btn-icon {
+    font-size: 18px;
+  }
+  
+  .btn-total {
+    font-size: 16px;
+    flex-basis: 100%;
+    margin-top: 5px;
+  }
+}

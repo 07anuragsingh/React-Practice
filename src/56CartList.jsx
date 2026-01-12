@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeItem, updateQuantity } from "./56Redux/cartSlice";
 import "./56CartList.css";
 import { createSelector } from "@reduxjs/toolkit";
+import Checkout from "./56Chekout";
 
 /* =====================================================
    CREATE SELECTORS (same file)
@@ -101,6 +102,11 @@ export default function CartListComponent() {
           ))}
 
           <div className="cart-total">
+            <Checkout
+              totalPrice={totalPrice}
+              cartCount={cartItems.length}
+            />
+
             <h3>Total: ₹{totalPrice.toFixed(2)}</h3>
           </div>
         </>
